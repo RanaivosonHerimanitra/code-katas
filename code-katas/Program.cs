@@ -48,7 +48,7 @@ namespace code_katas
             }
             foreach(int value in primes)
             {
-                Console.WriteLine(value);
+                if(value<=N) Console.WriteLine(value);
             }
         }
     }
