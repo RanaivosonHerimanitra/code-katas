@@ -27,7 +27,7 @@ namespace code_katas
             }
         }
 
-        // to find prime given max Range
+        // to list prime less than N
         static void erastotheneCrible(int N)
         {
             int currentPrime = 2;
@@ -48,7 +48,7 @@ namespace code_katas
             }
             foreach(int value in primes)
             {
-                if(value<=N) Console.WriteLine(value);
+                if (value <= N) Console.WriteLine(value);
             }
         }
     }
