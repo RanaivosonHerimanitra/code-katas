@@ -4,7 +4,7 @@ using System.Text;
 
 namespace code_katas
 {
-    class QuickUnion
+    public class QuickUnion
     {
         private int[] instanceArray;
 

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Humanizer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace code_katas
 {
@@ -8,10 +10,29 @@ namespace code_katas
     {
         static void Main(string[] args)
         {
+            /*
+             * IsEmail("bavion@gmail.com");
+            Console.WriteLine("chapeau".Pluralize());
             Console.WriteLine(DigitalRoot(456));
             erastotheneCrible(102);
+            */
+            RemoveVowel.Disemvowel("This website is for losers LOL!");
         }
 
+        // doing some regular expression to find email for instance:
+        static void IsEmail(string email)
+        {
+            MatchCollection mc = Regex.Matches(email, @"^a(.+)(@)(.+)");
+            if (mc.Count() == 0)
+            {
+                Console.WriteLine("no match");
+            } else
+            {
+                Console.WriteLine("trouvé");
+            }
+        }
+
+        // code katas
         static int DigitalRoot(long n)
         {
             var arrayOfDigitCharacter = n.ToString().ToCharArray();

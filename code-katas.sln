@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "code-katas", "code-katas\code-katas.csproj", "{9F098DCA-89C0-411B-B6B4-173E77BE1DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "code-katas", "code-katas\code-katas.csproj", "{9F098DCA-89C0-411B-B6B4-173E77BE1DE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "code-test", "code-test\code-test.csproj", "{F55B0366-88B3-424A-A898-E77DAB7B548B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9F098DCA-89C0-411B-B6B4-173E77BE1DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F098DCA-89C0-411B-B6B4-173E77BE1DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F098DCA-89C0-411B-B6B4-173E77BE1DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F55B0366-88B3-424A-A898-E77DAB7B548B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F55B0366-88B3-424A-A898-E77DAB7B548B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F55B0366-88B3-424A-A898-E77DAB7B548B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F55B0366-88B3-424A-A898-E77DAB7B548B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
