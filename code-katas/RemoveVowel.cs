@@ -18,7 +18,6 @@ namespace code_katas
                 {
                     output.Add(c);
                 }
-               
             }
             return string.Join("", output);
         
