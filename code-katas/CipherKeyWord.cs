@@ -1,54 +1,52 @@
 ﻿using Humanizer;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace code_katas
 {
     public class CipherKeyWord
     {
-        private Dictionary<char, char> encodingDict = new Dictionary<char, char>();
-        private Dictionary<char, char> decodingDict = new Dictionary<char, char>();
-
+        private string output;
+        private Dictionary<char, char> dico = new Dictionary<char, char>();
         public CipherKeyWord(string alphabet , string key)
         {
-            encodingDict = new Dictionary<char, char>();
-            decodingDict = new Dictionary<char, char>();
-
-            for (var j = 0; j < key.Length; j++)
+            var decode = new StringBuilder();
+            foreach (var i in alphabet)
             {
-                encodingDict.Add(alphabet[j], key[j]);
-                decodingDict.Add(key[j], alphabet[j]);
+                if (key.Contains(i) == false) {
+                    decode.Append(i);
+                }
             }
+            output = key + decode.ToString();
 
-            for (var j = key.Length; j<alphabet.Length; j++)
+            for(var k =0; k< alphabet.Length; k++)
             {
-                encodingDict.Add(alphabet[j], alphabet[j]); ;
-                decodingDict.Add(alphabet[j], alphabet[j]);
+                dico.Add(alphabet[k], output[k]);
             }
         }
 
         // cipher.encode('ABCHIJ') == 'KEYABC'
-        // take from original ALPHABET
         public string Encode(string str)
         {
-            var output = new StringBuilder();
-            for( var i=0; i<str.Length; i++)
+            var encodeOutput = new StringBuilder();
+            foreach (var key in str)
             {
-                output.Append(encodingDict.GetValueOrDefault(str[i]));
+                encodeOutput.Append(dico.GetValueOrDefault(key));
             }
-            return output.ToString();
+            return encodeOutput.ToString();
         }
 
         // cipher.decode('KEYABC') == 'ABCHIJ'
         public string Decode(string str)
         {
-            var output = new StringBuilder();
-            for (var i = 0; i < str.Length; i++)
+            var decodeOutput = new StringBuilder();
+            foreach (var val in str)
             {
-                output.Append(decodingDict.GetValueOrDefault(str[i]));
+                decodeOutput.Append(dico.FirstOrDefault(x => x.Value == val).Key);
             }
-            return output.ToString();
+            return decodeOutput.ToString();
         }
     }
 }

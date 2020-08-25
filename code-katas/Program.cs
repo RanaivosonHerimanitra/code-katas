@@ -16,6 +16,13 @@ namespace code_katas
             Console.WriteLine(DigitalRoot(456));
             erastotheneCrible(102);
             */
+            var abc = "abcdefghijklmnopqrstuvwxyz";
+            var key = "keyword";
+            var cipher = new CipherKeyWord(abc, key);
+            Console.WriteLine(cipher.Encode("abc"));
+            Console.WriteLine(cipher.Encode("xyz"));
+            Console.WriteLine(cipher.Decode("key"));
+            Console.WriteLine(cipher.Decode("vxz"));
             RemoveVowel.Disemvowel("This website is for losers LOL!");
         }
 
